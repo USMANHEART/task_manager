@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Henry Task Manager"/>
+  <div id="app">
+    <main>
+      <span>Enter Task:</span>
+      <p style="white-space: pre-line;">{{ task_data }}</p>
+      <br>
+      <textarea v-model="task_data" placeholder="add multiple lines"></textarea>
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      src: "en",
+      dest: "zhCN",
+      email: "usmanheart@gmail.com",
+      password: "PAKINDIA",
+      premiumkey: null
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
